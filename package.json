@@ -1,0 +1,16 @@
+{
+  "name": "@leroy/code-style",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {},
+  "keywords": [],
+  "author": "leroy",
+  "license": "MIT",
+  "devDependencies": {
+    "@leroy/prettier-config": "workspace:^",
+    "eslint": "^8.25.0",
+    "prettier": "^3.2.4",
+    "typescript": "^5.3.3"
+  },
+  "prettier": "@leroy/prettier-config"
+}
