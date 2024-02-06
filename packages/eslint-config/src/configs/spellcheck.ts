@@ -1,6 +1,8 @@
+import type { OptionsSpellcheck } from '../types';
+
 import pluginSpellcheck from 'eslint-plugin-spellcheck';
 
-export async function spellcheck() {
+export async function spellcheck(options: OptionsSpellcheck = {}) {
   return {
     plugins: { spellcheck: pluginSpellcheck },
     rules: {
@@ -11,7 +13,8 @@ export async function spellcheck() {
           strings: true,
           identifiers: true,
           lang: 'en_US',
-          minLength: 3
+          minLength: 3,
+          ...options
         }
       ]
     }
