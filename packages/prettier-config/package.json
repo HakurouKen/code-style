@@ -9,5 +9,8 @@
     "prettier-config"
   ],
   "author": "leroy",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "prettier": "^3.2.4"
+  }
 }

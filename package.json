@@ -2,14 +2,17 @@
   "name": "@leroy/code-style",
   "version": "0.1.0",
   "private": true,
+  "type": "module",
   "scripts": {},
   "keywords": [],
   "author": "leroy",
   "license": "MIT",
   "devDependencies": {
+    "@leroy/eslint-config": "workspace:^",
     "@leroy/prettier-config": "workspace:^",
-    "eslint": "^8.25.0",
+    "eslint": "^8.56.0",
     "prettier": "^3.2.4",
+    "tsup": "^8.0.1",
     "typescript": "^5.3.3"
   },
   "prettier": "@leroy/prettier-config"
