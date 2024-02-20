@@ -174,13 +174,6 @@ export async function javascript() {
           document: 'readonly',
           navigator: 'readonly',
           window: 'readonly'
-        },
-        parserOptions: {
-          ecmaFeatures: {
-            jsx: true
-          },
-          ecmaVersion: 2022,
-          sourceType: 'module'
         }
       },
       linterOptions: {

@@ -1,3 +1,9 @@
+import type { ParserOptions as TypescriptParserOptions } from '@typescript-eslint/parser';
+
+type WithFilesOptions = {
+  files?: string[];
+};
+
 export interface OptionsSpellcheck {
   comments?: boolean;
   strings?: boolean;
@@ -10,7 +16,12 @@ export interface OptionsSpellcheck {
   minLength?: number;
 }
 
+export interface OptionsTypescript extends WithFilesOptions {
+  parserOptions?: Partial<TypescriptParserOptions>;
+}
+
 export interface UserConfig {
   spellcheck?: boolean | OptionsSpellcheck;
   prettier?: boolean;
+  typescript?: boolean | OptionsTypescript;
 }

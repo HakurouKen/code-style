@@ -1,6 +1,6 @@
 export type Awaitable<T> = T | Promise<T>;
 
-export async function interopDefault<T extends any>(
+export async function interopDefault<T>(
   m: Awaitable<T>
 ): Promise<T extends { default: infer U } ? U : T> {
   const resolved: any = await m;

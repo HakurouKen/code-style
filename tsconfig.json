@@ -3,14 +3,14 @@
   "compilerOptions": {
     "target": "es2020",
     "module": "ESNext",
-    "moduleResolution": "Node",
+    "moduleResolution": "bundler",
     "lib": ["ESNext", "DOM"],
+    "declaration": true,
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
     "strict": true,
     "noImplicitAny": true,
     "skipLibCheck": true
   },
-  "include": ["packages/*/src", "scripts"],
-  "exclude": ["**/dist"]
+  "include": ["packages/*/src/**/*.ts"]
 }

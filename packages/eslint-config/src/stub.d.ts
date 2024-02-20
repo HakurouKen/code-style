@@ -1,4 +1,5 @@
-declare module '@typescript-eslint/parser';
+/// <reference types="node" />
+/// <reference types="eslint__eslintrc" />
 
 declare module 'eslint-plugin-eslint-comments';
 declare module 'eslint-plugin-import';

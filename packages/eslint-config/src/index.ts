@@ -8,6 +8,7 @@ import { imports } from './configs/imports';
 import { jsdoc } from './configs/jsdoc';
 import { prettier } from './configs/prettier';
 import { spellcheck } from './configs/spellcheck';
+import { typescript } from './configs/typescript';
 
 export async function resolveConfigs(
   ...configs: Awaitable<UserConfig | UserConfig[]>[]
@@ -30,12 +31,16 @@ export default function buildEslintConfig(options: UserConfig = {}) {
 
   configs.push(javascript(), eslintComments(), node(), imports(), jsdoc());
 
-  if (options.spellcheck ?? true) {
+  if (options.spellcheck ?? false) {
     configs.push(spellcheck(resolveChildOptions(options, 'spellcheck')));
   }
 
   if (options.prettier ?? true) {
     configs.push(prettier());
+  }
+
+  if (options.typescript ?? true) {
+    configs.push(typescript(resolveChildOptions(options, 'typescript')));
   }
 
   return resolveConfigs(...configs);
