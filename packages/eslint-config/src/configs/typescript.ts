@@ -14,6 +14,17 @@ const compat = new FlatCompat({
 
 export async function typescript(options: OptionsTypescript) {
   const configs = compat.extends('plugin:@typescript-eslint/recommended');
+  const files = options.files ?? [GLOB_SRC];
+
+  configs.push({
+    rules: {
+      '@typescript-eslint/no-explicit-any': 'off'
+    }
+  });
+
+  configs.forEach((config) => {
+    config.files = files;
+  });
 
   return [...configs];
 }

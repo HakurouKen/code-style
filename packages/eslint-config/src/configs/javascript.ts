@@ -127,7 +127,7 @@ export async function javascript() {
     'prefer-spread': 'error',
     'prefer-template': 'error',
     radix: 'warn',
-    'spaced-comment': ['error', 'always']
+    'spaced-comment': ['error', 'always', { markers: ['/'] }]
   };
 
   const stylisticRules = {

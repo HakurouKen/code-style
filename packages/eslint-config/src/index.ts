@@ -9,6 +9,7 @@ import { jsdoc } from './configs/jsdoc';
 import { prettier } from './configs/prettier';
 import { spellcheck } from './configs/spellcheck';
 import { typescript } from './configs/typescript';
+import { ignores } from './configs/ignores';
 
 export async function resolveConfigs(
   ...configs: Awaitable<UserConfig | UserConfig[]>[]
@@ -29,7 +30,14 @@ function resolveChildOptions<K extends keyof UserConfig>(
 export default function buildEslintConfig(options: UserConfig = {}) {
   const configs: any[] = [];
 
-  configs.push(javascript(), eslintComments(), node(), imports(), jsdoc());
+  configs.push(
+    ignores(),
+    javascript(),
+    eslintComments(),
+    node(),
+    imports(),
+    jsdoc()
+  );
 
   if (options.spellcheck ?? false) {
     configs.push(spellcheck(resolveChildOptions(options, 'spellcheck')));

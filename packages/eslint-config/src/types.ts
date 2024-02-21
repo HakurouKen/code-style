@@ -1,4 +1,4 @@
-import type { ParserOptions as TypescriptParserOptions } from '@typescript-eslint/parser';
+import { type ParserOptions as TypescriptParserOptions } from '@typescript-eslint/parser';
 
 type WithFilesOptions = {
   files?: string[];
