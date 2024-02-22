@@ -1,5 +1,5 @@
 import globals from 'globals';
-import { GLOB_SRC } from '../matchers';
+import { GLOB_SRC, GLOB_SRC_EXT } from '../matchers';
 
 export async function javascript() {
   const rules = {
@@ -168,7 +168,12 @@ export async function javascript() {
     },
     // allow all types of output in scripts
     {
-      files: [`scripts/${GLOB_SRC}`],
+      files: [
+        `scripts/${GLOB_SRC}`,
+        `bin/${GLOB_SRC}`,
+        `**/*.bin.${GLOB_SRC_EXT}`,
+        `**/*.cli.${GLOB_SRC_EXT}`
+      ],
       rules: {
         'no-console': 'off'
       }
