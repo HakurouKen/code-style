@@ -38,25 +38,7 @@ export async function javascript() {
     'no-new-func': 'error',
     'no-new-object': 'error',
     'no-new-wrappers': 'warn',
-    'no-param-reassign': [
-      'warn',
-      {
-        props: true,
-        ignorePropertyModificationsFor: [
-          'acc',
-          'accumulator',
-          'e',
-          'ctx',
-          'req',
-          'request',
-          'res',
-          'response',
-          '$scope',
-          'staticContext',
-          'state'
-        ]
-      }
-    ],
+    'no-param-reassign': 'off',
     'no-plusplus': 'off',
     'no-prototype-builtins': 'error',
     'no-restricted-properties': [
