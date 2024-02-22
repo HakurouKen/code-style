@@ -12,7 +12,6 @@
     "@leroy/prettier-config": "workspace:^",
     "eslint": "^8.56.0",
     "prettier": "^3.2.4",
-    "tsup": "^8.0.1",
     "typescript": "^5.3.3"
   },
   "prettier": "@leroy/prettier-config"
