@@ -107,7 +107,7 @@ export async function javascript() {
     ],
     'prefer-rest-params': 'off',
     'prefer-spread': 'error',
-    'prefer-template': 'error',
+    'prefer-template': 'off',
     radix: 'warn',
     'spaced-comment': ['error', 'always', { markers: ['/'] }]
   };
