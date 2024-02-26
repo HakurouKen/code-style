@@ -150,9 +150,12 @@ async function main() {
     await writeJson(file, content);
   }
 
-  await runIfNotDry('git', ['add', '-A']);
-  await runIfNotDry('git', ['commit', '-m', `release: v${targetVersion}`]);
-  await runIfNotDry('git', ['tag', `v${targetVersion}`]);
+  if (!skipGit) {
+    await runIfNotDry('git', ['add', '-A']);
+    await runIfNotDry('git', ['commit', '-m', `release: v${targetVersion}`]);
+    await runIfNotDry('git', ['tag', `v${targetVersion}`]);
+  }
+
   const publishArgs: string[] = [];
   if (isDryRun) {
     publishArgs.push('--dry-run');
