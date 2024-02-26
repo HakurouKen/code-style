@@ -1,14 +1,14 @@
 {
-  "name": "@leroy/prettier-config",
+  "name": "@hakurouken/prettier-config",
   "version": "0.1.0",
-  "description": "Leroy's prettier config.",
+  "description": "Hakurouken's prettier config.",
   "main": "index.js",
   "type": "module",
   "keywords": [
     "prettier",
     "prettier-config"
   ],
-  "author": "leroy",
+  "author": "Hakurouken",
   "license": "MIT",
   "devDependencies": {
     "prettier": "^3.2.4"

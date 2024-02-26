@@ -164,7 +164,7 @@ async function main() {
     publishArgs.push('--no-git-checks');
   }
 
-  await run('pnpm', ['-r', 'publish', ...publishArgs]);
+  await run('pnpm', ['-r', 'publish', '--access', 'public', ...publishArgs]);
   if (skipGit) {
     await runIfNotDry('git', ['push', 'origin', `refs/tags/v${targetVersion}`]);
     await runIfNotDry('git', ['push']);

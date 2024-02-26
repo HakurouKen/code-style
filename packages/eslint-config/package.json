@@ -1,7 +1,7 @@
 {
-  "name": "@leroy/eslint-config",
+  "name": "@hakurouken/eslint-config",
   "version": "0.1.0",
-  "description": "Leroy's eslint-config.",
+  "description": "Hakurouken's eslint-config.",
   "main": "dist/index.cjs",
   "exports": "./dist/index.js",
   "type": "module",
@@ -10,7 +10,7 @@
     "build:watch": "tsup --watch"
   },
   "keywords": [],
-  "author": "leroy",
+  "author": "Hakurouken",
   "license": "MIT",
   "dependencies": {
     "@eslint/eslintrc": "^3.0.1",

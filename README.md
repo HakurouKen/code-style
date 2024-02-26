@@ -1,24 +1,24 @@
-# Leroy's code-style config
+# hakurouken's code-style config
 
 ## Usage
 
-### @leroy/prettier-config
+### @hakurouken/prettier-config
 
 In `package.json`
 
 ```json
 {
-  "prettier": "@leroy/prettier-config"
+  "prettier": "@hakurouken/prettier-config"
 }
 ```
 
-### @leroy/eslint-config
+### @hakurouken/eslint-config
 
-With `type: module` in `pacakge.json` (esm):
+With `type: module` in `package.json` (esm):
 
 ```javascript
 // eslint.config.js
-import buildEslintConfig from '@leroy/eslint-config';
+import buildEslintConfig from '@hakurouken/eslint-config';
 
 export default buildEslintConfig();
 ```
@@ -27,7 +27,7 @@ Or with cjs:
 
 ```javascript
 // eslint.config.js
-const { default: buildEslintConfig } = require('@leroy/eslint-config');
+const { default: buildEslintConfig } = require('@hakurouken/eslint-config');
 
 module.exports = buildEslintConfig();
 ```

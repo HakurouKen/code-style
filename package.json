@@ -1,5 +1,5 @@
 {
-  "name": "@leroy/code-style",
+  "name": "@hakurouken/code-style",
   "version": "0.1.0",
   "private": true,
   "type": "module",
@@ -8,11 +8,11 @@
     "lint": "eslint \"packages/**/*.ts\""
   },
   "keywords": [],
-  "author": "leroy",
+  "author": "Hakurouken",
   "license": "MIT",
   "devDependencies": {
-    "@leroy/eslint-config": "workspace:^",
-    "@leroy/prettier-config": "workspace:^",
+    "@hakurouken/eslint-config": "workspace:^",
+    "@hakurouken/prettier-config": "workspace:^",
     "@types/inquirer": "^9.0.7",
     "@types/yargs": "^17.0.32",
     "eslint": "^8.56.0",
@@ -25,5 +25,5 @@
     "typescript": "^5.3.3",
     "yargs": "^17.7.2"
   },
-  "prettier": "@leroy/prettier-config"
+  "prettier": "@hakurouken/prettier-config"
 }

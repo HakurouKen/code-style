@@ -8,10 +8,10 @@ importers:
 
   .:
     devDependencies:
-      '@leroy/eslint-config':
+      '@hakurouken/eslint-config':
         specifier: workspace:^
         version: link:packages/eslint-config
-      '@leroy/prettier-config':
+      '@hakurouken/prettier-config':
         specifier: workspace:^
         version: link:packages/prettier-config
       '@types/inquirer':
