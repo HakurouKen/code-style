@@ -165,7 +165,7 @@ async function main() {
   }
 
   await run('pnpm', ['-r', 'publish', '--access', 'public', ...publishArgs]);
-  if (skipGit) {
+  if (!skipGit) {
     await runIfNotDry('git', ['push', 'origin', `refs/tags/v${targetVersion}`]);
     await runIfNotDry('git', ['push']);
   }
