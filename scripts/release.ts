@@ -165,8 +165,10 @@ async function main() {
   }
 
   await run('pnpm', ['publish', '-r', ...publishArgs]);
-  await runIfNotDry('git', ['push', 'origin', `refs/tags/v${targetVersion}`]);
-  await runIfNotDry('git', ['push']);
+  if (skipGit) {
+    await runIfNotDry('git', ['push', 'origin', `refs/tags/v${targetVersion}`]);
+    await runIfNotDry('git', ['push']);
+  }
 }
 
 main();
