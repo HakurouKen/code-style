@@ -36,7 +36,7 @@ const readJson = (file: string) => fsp.readFile(file, 'utf-8').then(JSON.parse);
 const writeJson = (file: string, content: any) =>
   fsp.writeFile(file, JSON.stringify(content, null, 2) + '\n', 'utf-8');
 
-const versionIncrecements = ['patch', 'minor', 'major'];
+const versionIncrements = ['patch', 'minor', 'major'];
 
 function updatePackageJson(
   packageJson: any,
@@ -68,7 +68,7 @@ function updatePackageJson(
 async function main() {
   let targetVersion = String(args._[0] || '');
 
-  if (versionIncrecements.includes(targetVersion)) {
+  if (versionIncrements.includes(targetVersion)) {
     targetVersion = semver.inc(currentVersion, targetVersion);
   } else if (!targetVersion || !semver.valid(targetVersion)) {
     if (targetVersion) {
@@ -80,7 +80,7 @@ async function main() {
         type: 'list',
         name: 'version',
         message: 'Please select a release type',
-        choices: versionIncrecements.concat(['custom'])
+        choices: versionIncrements.concat(['custom'])
       }
     ]);
     if (target === 'custom') {
