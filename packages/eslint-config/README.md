@@ -1,6 +1,6 @@
 # @hakurouken/eslint-config
 
-`@hakurouken/eslint-config` uses [Eslint Flat Config System](https://eslint.org/docs/latest/use/configure/configuration-files-new).
+`@hakurouken/eslint-config` uses [ESlint Flat Config System](https://eslint.org/docs/latest/use/configure/configuration-files-new).
 
 ## Usage
 
