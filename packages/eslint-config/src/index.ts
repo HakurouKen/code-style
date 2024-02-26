@@ -11,7 +11,7 @@ import { spellcheck } from './configs/spellcheck';
 import { typescript } from './configs/typescript';
 import { ignores } from './configs/ignores';
 
-export async function resolveConfigs(
+async function resolveConfigs(
   ...configs: Awaitable<UserConfig | UserConfig[]>[]
 ): Promise<UserConfig> {
   const resolved: any = await Promise.all(configs);
