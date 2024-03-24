@@ -1,6 +1,6 @@
 {
   "name": "@hakurouken/eslint-config",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Hakurouken's eslint-config.",
   "main": "dist/index.cjs",
   "exports": "./dist/index.js",
