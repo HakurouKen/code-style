@@ -10,10 +10,11 @@ import { prettier } from './configs/prettier';
 import { spellcheck } from './configs/spellcheck';
 import { typescript } from './configs/typescript';
 import { ignores } from './configs/ignores';
+import { type Linter } from 'eslint';
 
 async function resolveConfigs(
   ...configs: Awaitable<UserConfig | UserConfig[]>[]
-): Promise<UserConfig> {
+): Promise<Linter.FlatConfig[]> {
   const resolved: any = await Promise.all(configs);
   return resolved.flat();
 }
@@ -27,7 +28,10 @@ function resolveChildOptions<K extends keyof UserConfig>(
   return typeof options[key] === 'boolean' ? ({} as any) : options[key] || {};
 }
 
-export default function buildEslintConfig(options: UserConfig = {}) {
+export default function buildEslintConfig(
+  options: UserConfig = {},
+  ...userCustomConfigs: Awaitable<Linter.FlatConfig>[]
+) {
   const configs: any[] = [];
 
   configs.push(
@@ -50,6 +54,8 @@ export default function buildEslintConfig(options: UserConfig = {}) {
   if (options.typescript ?? true) {
     configs.push(typescript(resolveChildOptions(options, 'typescript')));
   }
+
+  configs.push(userCustomConfigs);
 
   return resolveConfigs(...configs);
 }
