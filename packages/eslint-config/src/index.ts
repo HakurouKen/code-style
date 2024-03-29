@@ -10,6 +10,7 @@ import { prettier } from './configs/prettier';
 import { spellcheck } from './configs/spellcheck';
 import { typescript } from './configs/typescript';
 import { ignores } from './configs/ignores';
+import { tampermonkey } from './configs/tampermonkey';
 import { type Linter } from 'eslint';
 
 async function resolveConfigs(
@@ -53,6 +54,10 @@ export default function buildEslintConfig(
 
   if (options.typescript ?? true) {
     configs.push(typescript(resolveChildOptions(options, 'typescript')));
+  }
+
+  if (options.tampermonkey) {
+    configs.push(tampermonkey(resolveChildOptions(options, 'tampermonkey')));
   }
 
   configs.push(userCustomConfigs);

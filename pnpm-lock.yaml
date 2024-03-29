@@ -83,6 +83,9 @@ importers:
       eslint-plugin-unused-imports:
         specifier: ^3.0.0
         version: 3.0.0(@typescript-eslint/eslint-plugin@6.21.0)(eslint@8.57.0)
+      eslint-plugin-userscripts:
+        specifier: ^0.5.2
+        version: 0.5.2(eslint@8.57.0)
       globals:
         specifier: ^13.24.0
         version: 13.24.0
@@ -1489,6 +1492,16 @@ packages:
       '@typescript-eslint/eslint-plugin': 6.21.0(@typescript-eslint/parser@6.21.0)(eslint@8.57.0)(typescript@5.4.3)
       eslint: 8.57.0
       eslint-rule-composer: 0.3.0
+    dev: false
+
+  /eslint-plugin-userscripts@0.5.2(eslint@8.57.0):
+    resolution: {integrity: sha512-wakC0yMSYunlHQ6xZIOvtZ4OsewkQ5fx8JT0swHUCvNH2dua9GMIzjW5HtD/mgxL902pvOn/UOFEWN5MFizJ3g==}
+    engines: {node: '>=18.0.0 <22.0.0'}
+    peerDependencies:
+      eslint: '>=8.40.0 <10'
+    dependencies:
+      eslint: 8.57.0
+      semver: 7.6.0
     dev: false
 
   /eslint-rule-composer@0.3.0:

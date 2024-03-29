@@ -4,6 +4,10 @@ type WithFilesOptions = {
   files?: string[];
 };
 
+export interface OptionsTampermonkey {
+  matchers?: string[];
+}
+
 export interface OptionsSpellcheck {
   comments?: boolean;
   strings?: boolean;
@@ -24,4 +28,5 @@ export interface UserConfig {
   spellcheck?: boolean | OptionsSpellcheck;
   prettier?: boolean;
   typescript?: boolean | OptionsTypescript;
+  tampermonkey?: boolean | OptionsTampermonkey;
 }
