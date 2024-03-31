@@ -7,12 +7,14 @@ export async function tampermonkey(options: OptionsTampermonkey = {}) {
   const files = options.matchers || [`**/*.user.${GLOB_SRC_EXT}`];
   return [
     {
-      files,
       languageOptions: {
         globals: {
           ...globals.greasemonkey
         }
-      },
+      }
+    },
+    {
+      files,
       plugins: { userscripts },
       rules: {
         'userscripts/filename-user': 'off',
